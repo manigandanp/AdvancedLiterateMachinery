@@ -60,11 +60,11 @@ class opts(object):
                                  help='save model to disk every 5 epochs.')
         self.parser.add_argument('--metric', default='loss',
                                  help='main metric to save best model')
-        self.parser.add_argument('--vis_thresh', type=float, default=0.3,
+        self.parser.add_argument('--vis_thresh', type=float, default=0.1,
                                  help='visualization threshold.')
-        self.parser.add_argument('--nms_thresh', type=float, default=0.3,
+        self.parser.add_argument('--nms_thresh', type=float, default=0.1,
                                  help='nms threshold.')
-        self.parser.add_argument('--corner_thresh', type=float, default=0.3,
+        self.parser.add_argument('--corner_thresh', type=float, default=0.1,
                                  help='threshold for corner.')
         self.parser.add_argument('--debugger_theme', default='white',
                                  choices=['white', 'black'])
@@ -232,9 +232,9 @@ class opts(object):
         # exdet
         self.parser.add_argument('--agnostic_ex', action='store_true',
                                  help='use category agnostic extreme points.')
-        self.parser.add_argument('--scores_thresh', type=float, default=0.3,
+        self.parser.add_argument('--scores_thresh', type=float, default=0.1,
                                  help='threshold for extreme point heatmap.')
-        self.parser.add_argument('--center_thresh', type=float, default=0.3,
+        self.parser.add_argument('--center_thresh', type=float, default=0.1,
                                  help='threshold for centermap.')
         self.parser.add_argument('--aggr_weight', type=float, default=0.0,
                                  help='edge aggregation weight.')
